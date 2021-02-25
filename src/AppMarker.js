@@ -6,7 +6,7 @@ function AppMarker() {
             <div className="arjs-loader">
                 <div><img src="../assets/favicon.ico" alt="test" />Loading, please wait...</div>
             </div>
-            <a-scene embedded arjs='sourceType: webcam;'>
+            <a-scene embedded arjs>
                 {/* <!-- we use cors proxy to avoid cross-origin problems --> */}
                 {/* <a-nft
                     type="nft"
@@ -22,13 +22,11 @@ function AppMarker() {
                     // position="50 150 0"
                     ></a-entity>
                 </a-nft> */}
-                <a-marker-camera type='pattern' url='../assets/pattern-marker.patt'>
-                    <a-assets>
-                        <a-asset-item id="pika" src="../assets/PikachuThick_tail.gltf"></a-asset-item>
-                    </a-assets>
-                    <a-entity gltf-model="##pika"></a-entity>
-
-                </a-marker-camera>
+                <a-assets>
+                    <a-asset-item id="pika" src="../assets/PikachuThick_tail.gltf"></a-asset-item>
+                </a-assets>
+                <a-entity gltf-model="##pika"></a-entity>
+                <a-marker-camera type='pattern' url='../assets/pattern-marker.patt'></a-marker-camera>
                 <a-entity camera></a-entity>
             </a-scene>
         </div>
