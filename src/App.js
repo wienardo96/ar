@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <div className="arjs-loader">
-        <div>Loading, please wait...</div>
+        <div><img src="../assets/favicon.ico" />Loading, please wait...</div>
       </div>
       <a-scene
         vr-mode-ui="enabled: false;"
@@ -15,7 +15,7 @@ function App() {
         {/* <!-- we use cors proxy to avoid cross-origin problems --> */}
         <a-nft
           type="nft"
-          url="../assets/react"
+          url="../assets/testing"
           smooth="true"
           smoothCount="10"
           smoothTolerance=".01"
@@ -23,8 +23,8 @@ function App() {
         >
           <a-entity
             gltf-model="../assets/PikachuThick_tail.gltf"
-            scale="5 5 5"
-            position="50 150 0"
+          // scale="5 5 5"
+          // position="50 150 0"
           ></a-entity>
         </a-nft>
         <a-entity camera></a-entity>
