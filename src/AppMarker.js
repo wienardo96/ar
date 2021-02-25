@@ -22,15 +22,13 @@ function AppMarker() {
                     // position="50 150 0"
                     ></a-entity>
                 </a-nft> */}
-                <a-marker preset='hiro'>
-                    {/* <!--Adding a glTF 2.0 model to your scene--> */}
-                    <a-entity
-                        // gltf-model-next="src: url(../assets/PikachuThick_tail.gltf);"
-                        gltf-model="url(../assets/PikachuThick_tail.gltf)"
-                    >
-                    </a-entity>
+                <a-marker-camera type='pattern' url='../assets/pattern-marker.patt'>
+                    <a-assets>
+                        <a-asset-item id="pika" src="../assets/PikachuThick_tail.gltf"></a-asset-item>
+                    </a-assets>
+                    <a-entity gltf-model="##pika"></a-entity>
 
-                </a-marker>
+                </a-marker-camera>
                 <a-entity camera></a-entity>
             </a-scene>
         </div>
