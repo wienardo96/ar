@@ -6,7 +6,7 @@ function AppMarker() {
             <div className="arjs-loader">
                 <div><img src="../assets/favicon.ico" alt="test" />Loading, please wait...</div>
             </div>
-            <a-scene embedded arjs>
+            <a-scene embedded arjs='sourceType: webcam;'>
                 {/* <!-- create your content here. just a box for now --> */}
                 <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
                 {/* <!-- define a camera which will move according to the marker position --> */}
