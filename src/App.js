@@ -15,7 +15,7 @@ function App() {
         {/* <!-- we use cors proxy to avoid cross-origin problems --> */}
         <a-nft
           type="nft"
-          url="./assets/download"
+          url="/assets/react"
           smooth="true"
           smoothCount="10"
           smoothTolerance=".01"
