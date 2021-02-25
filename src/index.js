@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import AppMarker from './AppMarker';
+import AppMarker from './AppMarker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppMarker />
   </React.StrictMode>,
   document.getElementById('root')
 );

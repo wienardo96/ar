@@ -7,10 +7,10 @@ function AppMarker() {
                 <div><img src="../assets/favicon.ico" alt="test" />Loading, please wait...</div>
             </div>
             <a-scene embedded arjs>
-                <a-marker-camera type='pattern' url='../assets/pattern-marker.patt'>
-                    <a-entity gltf-model="url(../assets/PikachuThick_tail.gltf)"></a-entity>
-                </a-marker-camera>
-                <a-entity camera></a-entity>
+                {/* <!-- create your content here. just a box for now --> */}
+                <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+                {/* <!-- define a camera which will move according to the marker position --> */}
+                <a-marker-camera preset='hiro'></a-marker-camera>
             </a-scene>
         </div>
     );
