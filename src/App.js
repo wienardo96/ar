@@ -1,6 +1,5 @@
 import "./App.css";
 
-
 function App() {
   return (
     <div className="App">
@@ -15,7 +14,7 @@ function App() {
         embedded
         gesture-detector
       >
-        {/* <a-marker
+        <a-marker
           id="animated-marker"
           type="pattern"
           preset="custom"
@@ -32,9 +31,9 @@ function App() {
             rotation="-90 0 0"
             gesture-handler
           ></a-image>
-        </a-marker> */}
+        </a-marker>
 
-        <a-nft
+        {/* <a-nft
           type="nft"
           url="assets/test"
           smooth="true"
@@ -42,14 +41,13 @@ function App() {
           smoothTolerance=".01"
           smoothThreshold="5"
         >
-          {/* <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity --> */}
           <a-entity
             gltf-model="assets/asset.gltf"
             scale="5 5 5"
             position="50 150 0"
           >
           </a-entity>
-        </a-nft>
+        </a-nft> */}
 
         <a-entity camera></a-entity>
       </a-scene>
