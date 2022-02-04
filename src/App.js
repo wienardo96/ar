@@ -24,7 +24,6 @@ function App() {
           raycaster="objects: .clickable"
           emitevents="true"
           cursor="fuse: false; rayOrigin: mouse;"
-          id="markerA"
         >
           <a-image
             src="assets/asset.gif"
