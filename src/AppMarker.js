@@ -1,20 +1,57 @@
 import "./App.css";
 
+
 function AppMarker() {
     return (
         <div className="App">
-            <div className="arjs-loader">
-                <div><img src="../assets/favicon.ico" alt="test" />Loading, please wait...</div>
-            </div>
-            <a-scene embedded arjs>
-                {/* <!-- create your content here. just a box for now --> */}
-                <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-                <a-assets>
-                    <a-asset-item id="tree" src="../assets/scene.gltf"></a-asset-item>
-                </a-assets>
-                <a-entity gltf-model="url(../assets/scene.gltf)"></a-entity>
-                {/* <!-- define a camera which will move according to the marker position --> */}
-                <a-marker-camera preset='hiro'></a-marker-camera>
+            {/* <div className="arjs-loader">
+        <div><img src="../assets/favicon.ico" alt="test" />Loading, please wait...</div>
+      </div> */}
+            <a-scene
+                vr-mode-ui="enabled: false;"
+                loading-screen="enabled: false;"
+                arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+                id="scene"
+                embedded
+                gesture-detector
+            >
+                {/* <a-marker
+          id="animated-marker"
+          type="pattern"
+          preset="custom"
+          url="assets/marker.patt"
+          raycaster="objects: .clickable"
+          emitevents="true"
+          cursor="fuse: false; rayOrigin: mouse;"
+          id="markerA"
+        >
+          <a-image
+            src="assets/asset.gif"
+            scale="1 1 1"
+            class="clickable"
+            rotation="-90 0 0"
+            gesture-handler
+          ></a-image>
+        </a-marker> */}
+
+                <a-nft
+                    type="nft"
+                    url="assets/test"
+                    smooth="true"
+                    smoothCount="10"
+                    smoothTolerance=".01"
+                    smoothThreshold="5"
+                >
+                    {/* <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity --> */}
+                    <a-entity
+                        gltf-model="assets/asset.gltf"
+                        scale="5 5 5"
+                        position="50 150 0"
+                    >
+                    </a-entity>
+                </a-nft>
+
+                <a-entity camera></a-entity>
             </a-scene>
         </div>
     );
