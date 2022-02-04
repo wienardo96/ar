@@ -6,7 +6,7 @@ function App() {
       {/* <div className="arjs-loader">
         <div><img src="../assets/favicon.ico" alt="test" />Loading, please wait...</div>
       </div> */}
-      <a-scene
+      {/* <a-scene
         vr-mode-ui="enabled: false;"
         loading-screen="enabled: false;"
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
@@ -31,27 +31,27 @@ function App() {
             rotation="-90 0 0"
             gesture-handler
           ></a-image>
-        </a-marker>
+        </a-marker> */}
 
-        {/* <a-nft
-          type="nft"
-          url="assets/test"
-          smooth="true"
-          smoothCount="10"
-          smoothTolerance=".01"
-          smoothThreshold="5"
+      <a-nft
+        type="nft"
+        url="assets/test"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+      >
+        <a-entity
+          gltf-model="assets/asset.gltf"
+          scale="5 5 5"
+          position="50 150 0"
         >
-          <a-entity
-            gltf-model="assets/asset.gltf"
-            scale="5 5 5"
-            position="50 150 0"
-          >
-          </a-entity>
-        </a-nft> */}
+        </a-entity>
+      </a-nft>
 
-        <a-entity camera></a-entity>
-      </a-scene>
-    </div>
+      <a-entity camera></a-entity>
+    </a-scene>
+    </div >
   );
 }
 
