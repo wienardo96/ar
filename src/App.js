@@ -4,9 +4,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <div className="arjs-loader">
+      {/* <div className="arjs-loader">
         <div><img src="../assets/favicon.ico" alt="test" />Loading, please wait...</div>
-      </div>
+      </div> */}
       <a-scene
         vr-mode-ui="enabled: false;"
         loading-screen="enabled: false;"
