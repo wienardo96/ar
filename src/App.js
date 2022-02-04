@@ -24,6 +24,7 @@ function App() {
           raycaster="objects: .clickable"
           emitevents="true"
           cursor="fuse: false; rayOrigin: mouse;"
+          id="markerA"
         >
           <a-image
             src="assets/asset.gif"
@@ -33,22 +34,6 @@ function App() {
             gesture-handler
           ></a-image>
         </a-marker>
-
-        {/* <a-nft
-          type="nft"
-          url="assets/test"
-          smooth="true"
-          smoothCount="10"
-          smoothTolerance=".01"
-          smoothThreshold="5"
-        >
-          <a-entity
-            gltf-model="assets/asset.gltf"
-            scale="5 5 5"
-            position="50 150 0"
-          >
-          </a-entity>
-        </a-nft> */}
 
         <a-entity camera></a-entity>
       </a-scene>
